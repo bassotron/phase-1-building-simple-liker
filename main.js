@@ -3,7 +3,14 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
+const $modal = $('#modal');
 
+//when hidden
+$modal.on('hidden.bs.modal', function(e) { 
+  return this.render(); //DOM destroyer
+});
+
+$modal.modal('hide'); //start hiding
 
 
 
